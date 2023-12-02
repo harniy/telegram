@@ -8,6 +8,10 @@ import Components from 'unplugin-vue-components/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  build: {
+    manifest: true,
+    chunkSizeWarningLimit: 1024,
+  },
   plugins: [
     vue(),
     AutoImport({
@@ -27,18 +31,9 @@ export default defineConfig({
     }),
   ],
   resolve: {
-    // preserveSymlinks: true,
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`,
       '@/': `${path.resolve(__dirname, 'src')}/`,
     },
-    // dedupe: [
-    //  'bn.js',
-    // 'bs58',
-    // 'lodash',
-    // 'buffer-layout',
-    // '@solana/web3.js',
-    // '@solana/buffer-layout',
-    // ],
   },
 })
