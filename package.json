@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "vite --port 3333",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
     "@quasar/extras": "^1.16.9",
