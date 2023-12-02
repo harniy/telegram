@@ -1,0 +1,86 @@
+<template>
+  <div class="main">
+    <div class="title">Usik configurator</div>
+
+    <MainUsik />
+    <UniqueUsik />
+    <FinishUsik />
+
+  </div>
+</template>
+
+<style lang="scss">
+.main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px 0;
+
+
+  .title {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-bottom: 20px;
+  }
+
+  .block {
+    width: 90%;
+    max-width: 500px;
+    padding: 10px;
+    box-shadow: 0 0 2px 1px #00000042;
+    margin-bottom: 20px;
+
+    &-title {
+      font-size: 15px;
+    }
+
+    &-result {
+      padding: 20px 0 0;
+
+      &__title {
+        position: relative;
+        text-align: center;
+        border-bottom: 1px solid #2a2b47;
+        margin-bottom: 10px;
+        padding: 8px 0;
+        font-weight: 600;
+
+        .switcher {
+          position: absolute;
+          top: 0px;
+          right: 0;
+
+          @media (max-width: 650px) {
+            position: relative;
+            top: 0;
+          }
+        }
+      }
+
+      &__usiks {
+        max-height: 400px;
+        overflow: auto;
+        background: #ededed;
+        padding: 10px 15px;
+      }
+
+      &__count {
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+
+        .q-icon {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  textarea {
+    resize: none !important;
+  }
+}
+</style>
