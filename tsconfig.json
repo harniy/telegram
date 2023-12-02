@@ -13,11 +13,8 @@
     },
     "resolveJsonModule": true,
     "types": [
-      "vite/client",
       "quasar",
       "node",
-      "vite-plugin-pages/client",
-      "vite-plugin-vue-layouts/client"
     ],
     "strict": true,
     "strictNullChecks": true,
@@ -39,7 +36,6 @@
   "exclude": [
     "node_modules",
     "dist",
-    "cypress",
     "**/*.js"
   ]
 }
