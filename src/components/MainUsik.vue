@@ -4,7 +4,7 @@ const usikStore = useUsikStore()
 </script>
 
 <template>
-  <div class="block">
+  <div class="block block-1">
     <div class="block-title">
       Enter text
     </div>

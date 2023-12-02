@@ -4,7 +4,7 @@ const usikStore = useUsikStore()
 </script>
 
 <template>
-  <div class="block" v-if="usikStore.filterUsiks.length !== 0">
+  <div class="block block-3" v-if="usikStore.filterUsiks.length !== 0">
     <div class="block-result">
       <div class="block-result__title">
         All users

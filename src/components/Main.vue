@@ -34,18 +34,28 @@
     margin-bottom: 20px;
 
     &-title {
-      font-size: 15px;
+      font-size: 17px;
+      padding: 0 0 10px;
+      text-align: center;
+    }
+
+    &-textarea {
+      height: 400px;
+
+      .q-field,
+      .q-field__control {
+        height: 400px;
+        background: #ededed;
+      }
     }
 
     &-result {
-      padding: 20px 0 0;
-
       &__title {
         position: relative;
         text-align: center;
         border-bottom: 1px solid #2a2b47;
         margin-bottom: 10px;
-        padding: 8px 0;
+        padding: 20px 0 8px;
         font-weight: 600;
 
         .switcher {
@@ -65,6 +75,7 @@
         overflow: auto;
         background: #ededed;
         padding: 10px 15px;
+        color: #000;
       }
 
       &__count {
@@ -74,9 +85,24 @@
 
         .q-icon {
           cursor: pointer;
+          font-size: 20px;
         }
       }
     }
+  }
+
+  .block-1 {
+    background-color: #1f2233;
+    color: #fff;
+  }
+
+  .block-2 {
+    background-color: #FF5722;
+    color: #fff;
+  }
+
+  .block-3 {
+    background-color: #8BC34A;
   }
 
   textarea {

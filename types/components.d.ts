@@ -10,7 +10,6 @@ declare module 'vue' {
     FinishUsik: typeof import('./../src/components/FinishUsik.vue')['default']
     Main: typeof import('./../src/components/Main.vue')['default']
     MainUsik: typeof import('./../src/components/MainUsik.vue')['default']
-    MainUsink: typeof import('./../src/components/MainUsink.vue')['default']
     UniqueUsik: typeof import('./../src/components/UniqueUsik.vue')['default']
   }
 }
