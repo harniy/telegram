@@ -1,5 +1,17 @@
+<script setup lang="ts">
+import { matDarkMode, matLightMode } from '@quasar/extras/material-icons'
+
+const theme = useQuasarTheme()
+
+const modeIcon = computed(() => theme.state.isDark ? matDarkMode : matLightMode)
+</script>
+
 <template>
   <div class="main">
+    <div class="dark-theme">
+      <q-toggle v-model="theme.state.isDark" color="primary" keep-color :icon="modeIcon" dense dark
+        @click="theme.toggle" />
+    </div>
     <div class="title">Usik configurator</div>
 
     <MainUsik />
@@ -8,97 +20,3 @@
 
   </div>
 </template>
-
-<style lang="scss">
-.main {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  min-height: 100vh;
-  padding: 20px 0;
-
-
-  .title {
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: 600;
-    padding-bottom: 20px;
-  }
-
-  .block {
-    width: 90%;
-    max-width: 500px;
-    padding: 10px;
-    box-shadow: 0 0 2px 1px #00000042;
-    margin-bottom: 20px;
-
-    &-title {
-      font-size: 17px;
-      padding: 0 0 10px;
-      text-align: center;
-    }
-
-    &-textarea {
-      height: 400px;
-
-      .q-field,
-      .q-field__control {
-        height: 400px;
-        background: #ededed;
-      }
-    }
-
-    &-result {
-      &__title {
-        position: relative;
-        border-bottom: 1px solid #2a2b47;
-        margin-bottom: 10px;
-        padding: 20px 0 8px;
-        font-weight: 600;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      &__usiks {
-        max-height: 400px;
-        overflow: auto;
-        background: #ededed;
-        padding: 10px 15px;
-        color: #000;
-      }
-
-      &__count {
-        padding: 10px 20px;
-        display: flex;
-        justify-content: space-between;
-
-        .q-icon {
-          cursor: pointer;
-          font-size: 20px;
-        }
-      }
-    }
-  }
-
-  .block-1 {
-    background-color: #1f2233;
-    color: #fff;
-  }
-
-  .block-2 {
-    background-color: #FF5722;
-    color: #fff;
-  }
-
-  .block-3 {
-    background-color: #21284e;
-    color: #fff;
-  }
-
-  textarea {
-    resize: none !important;
-  }
-}
-</style>

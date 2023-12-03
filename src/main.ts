@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
-import './style.css'
+import '@/assets/scss/main.scss'
 import App from './App.vue'
-import { Quasar, Notify } from 'quasar'
+import { Quasar, Notify, Dark } from 'quasar'
 import iconSet from 'quasar/icon-set/svg-eva-icons'
 import { createPinia } from 'pinia'
 
@@ -14,7 +14,7 @@ const myApp = createApp(App)
 const pinia = createPinia()
 
 myApp.use(Quasar, {
-  plugins: { Notify },
+  plugins: { Notify, Dark },
   iconSet
 }).use(pinia)
   .mount('#app')
