@@ -52,22 +52,13 @@
     &-result {
       &__title {
         position: relative;
-        text-align: center;
         border-bottom: 1px solid #2a2b47;
         margin-bottom: 10px;
         padding: 20px 0 8px;
         font-weight: 600;
-
-        .switcher {
-          position: absolute;
-          top: 0px;
-          right: 0;
-
-          @media (max-width: 650px) {
-            position: relative;
-            top: 0;
-          }
-        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
       &__usiks {
@@ -102,7 +93,8 @@
   }
 
   .block-3 {
-    background-color: #8BC34A;
+    background-color: #21284e;
+    color: #fff;
   }
 
   textarea {

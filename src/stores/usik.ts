@@ -4,7 +4,12 @@ import { useQuasar } from 'quasar'
 export const useUsikStore = defineStore('usik', () => {
   const state = reactive<any>({
     rawUsiks: '',
-    toggle: false
+    toggle: false,
+    withId: {
+      main: true,
+      unique: true,
+      result: true
+    }
   })
 
   const { notify } = useQuasar()
