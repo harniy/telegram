@@ -17,7 +17,7 @@ export const useUsikStore = defineStore('usik', () => {
   const indexOfAll = (arr, val) => arr.reduce((acc, el, i) => (el === val ? [...acc, i] : acc), [])
 
   const filterUsiks = computed(() =>
-    state.rawUsiks?.replaceAll('\n', ' ')?.split(' ')?.filter(w => w.includes('@')) ?? [])
+    state.rawUsiks?.replaceAll('\n', ' ')?.split(' ')?.filter(w => w.includes('@') && !w.includes(',')) ?? [])
 
   const repeatedUsers = computed(() => {
     const unique = Array.from(new Set(filterUsiks.value))
